@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		6D5704241CD1F19F00BAA506 /* GSMaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D5704221CD1F19F00BAA506 /* GSMaterialTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D5704251CD1F19F00BAA506 /* GSMaterialTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5704231CD1F19F00BAA506 /* GSMaterialTextField.m */; };
-		6DF9C94F1CD2FECD00B09E0A /* GSLengthValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF9C94B1CD2FECD00B09E0A /* GSLengthValidator.h */; };
+		6DF9C94F1CD2FECD00B09E0A /* GSLengthValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF9C94B1CD2FECD00B09E0A /* GSLengthValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DF9C9501CD2FECD00B09E0A /* GSLengthValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF9C94C1CD2FECD00B09E0A /* GSLengthValidator.m */; };
-		6DF9C9511CD2FECD00B09E0A /* GSNameValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF9C94D1CD2FECD00B09E0A /* GSNameValidator.h */; };
+		6DF9C9511CD2FECD00B09E0A /* GSNameValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF9C94D1CD2FECD00B09E0A /* GSNameValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DF9C9521CD2FECD00B09E0A /* GSNameValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF9C94E1CD2FECD00B09E0A /* GSNameValidator.m */; };
 		6DF9C9881CD3459E00B09E0A /* GSMaterialTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6DF9C9871CD3459E00B09E0A /* GSMaterialTextField.bundle */; };
 		72D79EFAE009C3CE922CBE3F /* libPods-GSMaterialTextField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E23954843C0DE47197578812 /* libPods-GSMaterialTextField.a */; };
