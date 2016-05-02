@@ -25,7 +25,6 @@ static NSString *bundleName = @"GSTextField";
     GSLocalizedString((key), bundleName)
 #endif
 
-
 #pragma mark - Get Methods
 
 -(UIView *)seperatorView {
@@ -108,8 +107,8 @@ static NSString *bundleName = @"GSTextField";
         [self addSubview:self.errorLabel];
         [self addSubview:self.countLabel];
 
-        self.maxCount = -1;
-        self.minCount = -1;
+        _maxCount = -1;
+        _minCount = -1;
         isSelected = false;
     }
     return self;
@@ -218,50 +217,50 @@ static NSString *bundleName = @"GSTextField";
             isValid = YES;
             if ([validator isKindOfClass:[LKRequiredValidator class]]) {
                 isValid = NO;
-//                self.errorLabel.text = GSMaterialLocalizedString(@"error.required");
+                self.errorLabel.text = GSMaterialLocalizedString(@"error.required");
             }
-//            else if ([validator isKindOfClass:[LKAlphaValidator class]]) {
-//                if (self.textField.text.length > 0) {
-//                    isValid = NO;
-//                    self.errorLabel.text = GSMaterialLocalizedString(@"error.letter");
-//                }
-//            }
-//            else if ([validator isKindOfClass:[GSNameValidator class]]) {
-//                if (self.textField.text.length > 0) {
-//                    isValid = NO;
-//                    self.errorLabel.text = GSMaterialLocalizedString(@"error.letter.hyphen");
-//                }
-//            }
-//            else if ([validator isKindOfClass:[LKEmailValidator class]]) {
-//                if (self.textField.text.length > 0) {
-//                    isValid = NO;
-//                    self.errorLabel.text = GSMaterialLocalizedString(@"error.email");
-//                }
-//            }
-//            else if ([validator isKindOfClass:[LKNumericValidator class]]) {
-//                if (self.textField.text.length > 0) {
-//                    isValid = NO;
-//                    self.errorLabel.text = GSMaterialLocalizedString(@"error.number");
-//                }
-//            }
-//            else if ([validator isKindOfClass:[LKLengthValidator class]]) {
-//                if (self.textField.text.length > 0) {
-//                    isValid = NO;
-//                    self.errorLabel.text = GSMaterialLocalizedString(@"error.min.length");
-//                }
-//            }
-//            else if ([validator isKindOfClass:[GSLengthValidator class]]) {
-//                if (self.textField.text.length > 0) {
-//                    isValid = NO;
-//                    self.errorLabel.text = GSMaterialLocalizedString(@"error.length.error");
-//                }
-//            }
-//            else {
-//                self.errorLabel.text = GSMaterialLocalizedString(@"error.error");
-//            }
-//            if (!isValid) {
-//                break;
-//            }
+            else if ([validator isKindOfClass:[LKAlphaValidator class]]) {
+                if (self.textField.text.length > 0) {
+                    isValid = NO;
+                    self.errorLabel.text = GSMaterialLocalizedString(@"error.letter");
+                }
+            }
+            else if ([validator isKindOfClass:[GSNameValidator class]]) {
+                if (self.textField.text.length > 0) {
+                    isValid = NO;
+                    self.errorLabel.text = GSMaterialLocalizedString(@"error.letter.hyphen");
+                }
+            }
+            else if ([validator isKindOfClass:[LKEmailValidator class]]) {
+                if (self.textField.text.length > 0) {
+                    isValid = NO;
+                    self.errorLabel.text = GSMaterialLocalizedString(@"error.email");
+                }
+            }
+            else if ([validator isKindOfClass:[LKNumericValidator class]]) {
+                if (self.textField.text.length > 0) {
+                    isValid = NO;
+                    self.errorLabel.text = GSMaterialLocalizedString(@"error.number");
+                }
+            }
+            else if ([validator isKindOfClass:[LKLengthValidator class]]) {
+                if (self.textField.text.length > 0) {
+                    isValid = NO;
+                    self.errorLabel.text = GSMaterialLocalizedString(@"error.min.length");
+                }
+            }
+            else if ([validator isKindOfClass:[GSLengthValidator class]]) {
+                if (self.textField.text.length > 0) {
+                    isValid = NO;
+                    self.errorLabel.text = GSMaterialLocalizedString(@"error.length.error");
+                }
+            }
+            else {
+                self.errorLabel.text = GSMaterialLocalizedString(@"error.error");
+            }
+            if (!isValid) {
+                break;
+            }
         }
     }
     if (isValid) {
