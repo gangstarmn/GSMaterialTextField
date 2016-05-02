@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		6D5704241CD1F19F00BAA506 /* GSMaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D5704221CD1F19F00BAA506 /* GSMaterialTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D5704251CD1F19F00BAA506 /* GSMaterialTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5704231CD1F19F00BAA506 /* GSMaterialTextField.m */; };
-		6DF9C94F1CD2FECD00B09E0A /* GSLengthValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF9C94B1CD2FECD00B09E0A /* GSLengthValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6DF9C9501CD2FECD00B09E0A /* GSLengthValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF9C94C1CD2FECD00B09E0A /* GSLengthValidator.m */; };
-		6DF9C9511CD2FECD00B09E0A /* GSNameValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF9C94D1CD2FECD00B09E0A /* GSNameValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6DF9C9521CD2FECD00B09E0A /* GSNameValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF9C94E1CD2FECD00B09E0A /* GSNameValidator.m */; };
-		6DF9C9881CD3459E00B09E0A /* GSMaterialTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6DF9C9871CD3459E00B09E0A /* GSMaterialTextField.bundle */; };
 		72D79EFAE009C3CE922CBE3F /* libPods-GSMaterialTextField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E23954843C0DE47197578812 /* libPods-GSMaterialTextField.a */; };
 /* End PBXBuildFile section */
 
@@ -24,11 +19,6 @@
 		6D5704181CD1E4B600BAA506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D5704221CD1F19F00BAA506 /* GSMaterialTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMaterialTextField.h; sourceTree = "<group>"; };
 		6D5704231CD1F19F00BAA506 /* GSMaterialTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMaterialTextField.m; sourceTree = "<group>"; };
-		6DF9C94B1CD2FECD00B09E0A /* GSLengthValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLengthValidator.h; sourceTree = "<group>"; };
-		6DF9C94C1CD2FECD00B09E0A /* GSLengthValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLengthValidator.m; sourceTree = "<group>"; };
-		6DF9C94D1CD2FECD00B09E0A /* GSNameValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSNameValidator.h; sourceTree = "<group>"; };
-		6DF9C94E1CD2FECD00B09E0A /* GSNameValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSNameValidator.m; sourceTree = "<group>"; };
-		6DF9C9871CD3459E00B09E0A /* GSMaterialTextField.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GSMaterialTextField.bundle; sourceTree = "<group>"; };
 		E23954843C0DE47197578812 /* libPods-GSMaterialTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GSMaterialTextField.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,11 +63,6 @@
 		6D5704151CD1E4B600BAA506 /* GSMaterialTextField */ = {
 			isa = PBXGroup;
 			children = (
-				6DF9C9871CD3459E00B09E0A /* GSMaterialTextField.bundle */,
-				6DF9C94B1CD2FECD00B09E0A /* GSLengthValidator.h */,
-				6DF9C94C1CD2FECD00B09E0A /* GSLengthValidator.m */,
-				6DF9C94D1CD2FECD00B09E0A /* GSNameValidator.h */,
-				6DF9C94E1CD2FECD00B09E0A /* GSNameValidator.m */,
 				6D5704181CD1E4B600BAA506 /* Info.plist */,
 				6D5704221CD1F19F00BAA506 /* GSMaterialTextField.h */,
 				6D5704231CD1F19F00BAA506 /* GSMaterialTextField.m */,
@@ -102,8 +87,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D5704241CD1F19F00BAA506 /* GSMaterialTextField.h in Headers */,
-				6DF9C9511CD2FECD00B09E0A /* GSNameValidator.h in Headers */,
-				6DF9C94F1CD2FECD00B09E0A /* GSLengthValidator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +149,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DF9C9881CD3459E00B09E0A /* GSMaterialTextField.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,8 +192,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DF9C9501CD2FECD00B09E0A /* GSLengthValidator.m in Sources */,
-				6DF9C9521CD2FECD00B09E0A /* GSNameValidator.m in Sources */,
 				6D5704251CD1F19F00BAA506 /* GSMaterialTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,14 +18,15 @@
 
 @implementation GSMaterialTextField
 
-static NSString *bundleName = @"GSMaterialTextField";
+static NSString *bundleName = @"GSTextField";
 
 #ifndef GSMaterialLocalizedString
 #define GSMaterialLocalizedString(key) \
     GSLocalizedString((key), bundleName)
 #endif
 
-//#define GSMaterialLocalizedString (key) GSLocalizedString((key), bundleName)
+
+#pragma mark - Get Methods
 
 -(UIView *)seperatorView {
     if (!_seperatorView) {
@@ -71,23 +72,20 @@ static NSString *bundleName = @"GSMaterialTextField";
 
 - (UILabel *)errorLabel {
     if (!_errorLabel) {
-        _errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 47, self.bounds.size.width-100, 13)];
+        _errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 47, self.bounds.size.width-85, 13)];
         _errorLabel.font = [UIFont systemFontOfSize:12];
         _errorLabel.textColor = [UIColor redColor];
         _errorLabel.numberOfLines = 2;
-//        _errorLabel.highlightedTextColor = [UIColor redColor];
     }
     return _errorLabel;
 }
 
 - (UILabel *)countLabel {
     if (!_countLabel) {
-        _countLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.bounds.size.width-95, 47, 90, 13)];
+        _countLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.bounds.size.width-75, 47, 70, 13)];
         _countLabel.font = [UIFont systemFontOfSize:12];
         _countLabel.textColor = self.normalColor;
-        _countLabel.layer.borderWidth = 1;
         _countLabel.textAlignment = NSTextAlignmentRight;
-//        _countLabel.highlightedTextColor = self.selectedColor;
     }
     return _countLabel;
 }
@@ -98,6 +96,9 @@ static NSString *bundleName = @"GSMaterialTextField";
     }
     return _shakeView;
 }
+
+#pragma mark - Init
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -110,11 +111,23 @@ static NSString *bundleName = @"GSMaterialTextField";
         self.maxCount = -1;
         self.minCount = -1;
         isSelected = false;
-        GSLocalizeAddBundle(bundleName);
-//        [self addSubview:self.countLabel];
     }
     return self;
 }
+
+#pragma mark - Set Methods
+
+- (void)setMaxCount:(int)maxCount {
+    _maxCount = maxCount;
+    [self checkCount];
+}
+
+- (void)setMinCount:(int)minCount {
+    _minCount = minCount;
+    [self checkCount];
+}
+
+#pragma mark - Editing Events
 
 - (void) startEditing {
     isSelected = true;
@@ -135,21 +148,20 @@ static NSString *bundleName = @"GSMaterialTextField";
             self.hintLabel.frame = CGRectMake(5, 15, self.bounds.size.width-10, 30);
             self.hintLabel.font = [UIFont systemFontOfSize:17];
         }
-        else {
-            
-        }
         self.hintLabel.highlighted = NO;
     } completion:^(BOOL finished) {
         
     }];
 }
 
+#pragma mark - TextDid Change
+
 - (void) textDidChange :(UITextField *)textField {
-    NSLog(@"BLA BLa");
     [self isValid];
     [self checkCount];
-    
 }
+
+#pragma mark - View Change
 
 - (void) checkCount {
     NSString *countChecker = @"";
@@ -188,8 +200,14 @@ static NSString *bundleName = @"GSMaterialTextField";
     if (countChecker.length > 0) {
         self.countLabel.text = [NSString stringWithFormat:@"%lu/%@",(unsigned long)[self.textField.text length],countChecker];
     }
-    
+    if (isValid) {
+        self.countLabel.textColor = self.normalColor;
+    }
+    else {
+        self.countLabel.textColor = [UIColor redColor];
+    }
 }
+
 -(BOOL) isValid  {
     BOOL isValid = YES;
     
@@ -254,10 +272,8 @@ static NSString *bundleName = @"GSMaterialTextField";
         else {
             self.seperatorView.backgroundColor = self.normalColor;
         }
-        self.countLabel.textColor = self.normalColor;
     }
     else {
-        self.countLabel.textColor = [UIColor redColor];
         self.seperatorView.backgroundColor = [UIColor redColor];
     }
     return isValid;

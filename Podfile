@@ -7,5 +7,6 @@ target 'GSMaterialTextField' do
     pod 'InputValidators'
     pod 'SCViewShaker'
     pod 'HexColors'
-    pod 'GSLocalization', '~> 0.0.5'
+    pod 'GSLocalization'
+    pod 'GSTextField'
 end

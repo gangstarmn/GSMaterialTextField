@@ -5,12 +5,17 @@ PODS:
     - GSLog
   - GSLog (0.0.1):
     - ATLog
+  - GSTextField (0.1.0):
+    - GSLocalization
+    - InputValidators
+    - SCViewShaker
   - HexColors (4.0.0)
   - InputValidators (1.0.0)
   - SCViewShaker (1.0.2)
 
 DEPENDENCIES:
-  - GSLocalization (~> 0.0.5)
+  - GSLocalization
+  - GSTextField
   - HexColors
   - InputValidators
   - SCViewShaker
@@ -19,6 +24,7 @@ SPEC CHECKSUMS:
   ATLog: e9c8afd11e4108381fdc862e9ccb793435f8c259
   GSLocalization: d20bc620b3a840409bede8c208792c08835ca8a6
   GSLog: be5eeffcc705ef25cb8ac729f5dd2d9a694a34e0
+  GSTextField: 1412e7ebc7aa9571957c9526770ce104285c7fc2
   HexColors: 5f95843ef89aff6a72e1fd3a8ebabf205cc43379
   InputValidators: b278d3042d23893533d688cfb1563370d4cb184e
   SCViewShaker: ebd2937cc5ac1de808164bcb5be2a23c8a6e7ab6
