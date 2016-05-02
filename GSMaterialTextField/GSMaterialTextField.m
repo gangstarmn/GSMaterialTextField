@@ -90,10 +90,10 @@ static NSString *bundleName = @"GSTextField";
 }
 
 - (UIView *)shakeView {
-    if (!_shakeView) {
-        _shakeView = self.superview;
-    }
-    return _shakeView;
+//    if (!_shakeView) {
+//        _shakeView = self.superview;
+//    }
+    return self;
 }
 
 #pragma mark - Init
