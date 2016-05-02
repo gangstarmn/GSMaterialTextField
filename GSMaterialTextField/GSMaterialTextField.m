@@ -157,7 +157,7 @@ static NSString *bundleName = @"GSMaterialTextField";
     if (self.minCount >= 0) {
         if (self.maxCount >= 0) {
             countChecker = [NSString stringWithFormat:@"(%d - %d)",self.minCount, self.maxCount];
-            if (self.textField.text >= self.minCount && self.textField.text <= self.maxCount) {
+            if ([self.textField.text length] >= self.minCount && [self.textField.text length] <= self.maxCount) {
                 isValid = true;
             }
             else{
@@ -165,8 +165,8 @@ static NSString *bundleName = @"GSMaterialTextField";
             }
         }
         else {
-            countChecker = [NSString stringWithFormat:@"%d+"];
-            if (self.textField.text >= self.minCount) {
+            countChecker = [NSString stringWithFormat:@"%d+",self.minCount];
+            if ([self.textField.text length] >= self.minCount) {
                 isValid = true;
             }
             else{
@@ -177,7 +177,7 @@ static NSString *bundleName = @"GSMaterialTextField";
     else {
         if (self.maxCount >= 0) {
             countChecker = [NSString stringWithFormat:@"%d", self.maxCount];
-            if (self.textField.text <= self.maxCount) {
+            if ([self.textField.text length] <= self.maxCount) {
                 isValid = true;
             }
             else{
@@ -186,7 +186,7 @@ static NSString *bundleName = @"GSMaterialTextField";
         }
     }
     if (countChecker.length > 0) {
-        self.countLabel.text = [NSString stringWithFormat:@"%d/%@",[self.textField.text length],countChecker];
+        self.countLabel.text = [NSString stringWithFormat:@"%lu/%@",(unsigned long)[self.textField.text length],countChecker];
     }
     
 }

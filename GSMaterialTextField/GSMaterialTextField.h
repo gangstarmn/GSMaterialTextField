@@ -23,7 +23,6 @@
 
 @property (nonatomic, strong) NSArray<LKValidator *> *validators;
 @property (nonatomic, strong) UIView *shakeView;
-@property (nonatomic, assign) BOOL checkCount;
 @property (nonatomic, assign) int maxCount;
 @property (nonatomic, assign) int minCount;
 
