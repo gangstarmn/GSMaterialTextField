@@ -285,4 +285,17 @@ static NSString *bundleName = @"GSTextField";
     }
     return true;
 }
+
+- (void)reloadViews {
+    if ([self.textField.text length] > 0) {
+        self.hintLabel.frame = CGRectMake(5, 0, self.bounds.size.width-10, 15);
+        self.hintLabel.font = [UIFont systemFontOfSize:12];
+    }
+    else {
+        self.hintLabel.frame = CGRectMake(5, 15, self.bounds.size.width-10, 30);
+        self.hintLabel.font = [UIFont systemFontOfSize:17];
+    }
+    [self textDidChange:self.textField];
+}
+
 @end

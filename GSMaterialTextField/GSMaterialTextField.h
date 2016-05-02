@@ -27,5 +27,6 @@
 
 - (void) startEditing;
 - (void) endEditing;
-
+- (BOOL) checkValid;
+- (void) reloadViews;
 @end
