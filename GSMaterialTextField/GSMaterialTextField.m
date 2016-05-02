@@ -239,11 +239,9 @@ static NSString *bundleName = @"GSMaterialTextField";
                 }
             }
             else {
-                ATLogError(@"error");
                 self.errorLabel.text = GSMaterialLocalizedString(@"error.error");
             }
             if (!isValid) {
-                ATLogError(@"Error ")
                 break;
             }
         }
