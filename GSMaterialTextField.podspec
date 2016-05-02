@@ -1,6 +1,6 @@
  Pod::Spec.new do |s|
   s.name         = "GSMaterialTextField"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "GSMaterialTextField is a error view with UITextField"
   s.description  = <<-DESC
                     Алдаа харуулдаг, Мөн алдааны мэссэж харуулдаг UITextfield.
@@ -13,11 +13,17 @@
   
   s.source_files = "GSMaterialTextField/**/*.{h,m}"
   
-  s.resources = "GSMaterialTextField/**/*.{xib,xcassets}"
+  #s.resources = "GSMaterialTextField/**/*.{xib,xcassets}"
   
   s.framework = 'UIKit'
   s.requires_arc = true
-  s.dependency 'HexColors'
+
+  s.dependency 'ATLog'
+  s.dependency 'GSLocalization'
+  s.dependency 'GSLog'
   s.dependency 'GSTextField'
+  s.dependency 'HexColors'
+  s.dependency 'InputValidators'
+  s.dependency 'SCViewShaker'
 
   end

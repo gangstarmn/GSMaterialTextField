@@ -4,8 +4,6 @@
 # use_frameworks!
 
 target 'GSMaterialTextField' do
-    pod 'InputValidators'
-    pod 'SCViewShaker'
     pod 'HexColors'
     pod 'GSLocalization'
     pod 'GSTextField'

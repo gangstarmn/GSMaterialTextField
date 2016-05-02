@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GSLengthValidator.h"
-#import "GSNameValidator.h"
+#import <GSTextField/GSTextFieldKit.h>
 #import <InputValidators/LKValidators.h>
 @interface GSMaterialTextField : UIView
 @property (nonatomic, strong) UILabel *hintLabel;
