@@ -26,7 +26,12 @@ static NSString *bundleName = @"GSTextField";
 #endif
 
 #pragma mark - Get Methods
-
+- (UIColor *)errorColor {
+    if (!_errorColor) {
+        _errorColor = [UIColor redColor];
+    }
+    return _errorColor;
+}
 -(UIView *)seperatorView {
     if (!_seperatorView) {
         _seperatorView = [[UIView alloc] initWithFrame:CGRectMake(5, 45, self.bounds.size.width-10, 2)];
@@ -73,7 +78,7 @@ static NSString *bundleName = @"GSTextField";
     if (!_errorLabel) {
         _errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 47, self.bounds.size.width-85, 13)];
         _errorLabel.font = [UIFont systemFontOfSize:12];
-        _errorLabel.textColor = [UIColor redColor];
+        _errorLabel.textColor = self.errorColor;
         _errorLabel.numberOfLines = 2;
     }
     return _errorLabel;
@@ -90,9 +95,6 @@ static NSString *bundleName = @"GSTextField";
 }
 
 - (UIView *)shakeView {
-//    if (!_shakeView) {
-//        _shakeView = self.superview;
-//    }
     return self;
 }
 
@@ -148,6 +150,7 @@ static NSString *bundleName = @"GSTextField";
             self.hintLabel.font = [UIFont systemFontOfSize:17];
         }
         self.hintLabel.highlighted = NO;
+        [self isValid];
     } completion:^(BOOL finished) {
         
     }];
@@ -203,7 +206,7 @@ static NSString *bundleName = @"GSTextField";
         self.countLabel.textColor = self.normalColor;
     }
     else {
-        self.countLabel.textColor = [UIColor redColor];
+        self.countLabel.textColor = self.errorColor;
     }
 }
 
@@ -273,7 +276,7 @@ static NSString *bundleName = @"GSTextField";
         }
     }
     else {
-        self.seperatorView.backgroundColor = [UIColor redColor];
+        self.seperatorView.backgroundColor = self.errorColor;
     }
     return isValid;
 }
