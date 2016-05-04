@@ -1,6 +1,6 @@
  Pod::Spec.new do |s|
   s.name         = "GSMaterialTextField"
-  s.version      = "0.0.9"
+  s.version      = "0.1.0"
   s.summary      = "GSMaterialTextField is a error view with UITextField"
   s.description  = <<-DESC
                     Алдаа харуулдаг, Мөн алдааны мэссэж харуулдаг UITextfield.
@@ -12,9 +12,7 @@
   s.source = { :git => 'https://github.com/gangstarmn/GSMaterialTextField.git', :tag => "#{s.version}" }
   
   s.source_files = "GSMaterialTextField/**/*.{h,m}"
-  
-  #s.resources = "GSMaterialTextField/**/*.{xib,xcassets}"
-  
+    
   s.framework = 'UIKit'
   s.requires_arc = true
 
