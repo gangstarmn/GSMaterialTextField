@@ -14,7 +14,6 @@
 @property (nonatomic, strong) UITextField *textField;
 
 @property (nonatomic, strong) UILabel *errorLabel;
-@property (nonatomic, strong) UILabel *countLabel;
 
 @property (nonatomic, strong) UIColor *selectedColor;
 @property (nonatomic, strong) UIColor *normalColor;
@@ -22,8 +21,6 @@
 
 @property (nonatomic, strong) NSArray<LKValidator *> *validators;
 @property (nonatomic, strong) UIView *shakeView;
-@property (nonatomic, assign) int maxCount;
-@property (nonatomic, assign) int minCount;
 
 - (void) startEditing;
 - (void) endEditing;

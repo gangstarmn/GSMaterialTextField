@@ -76,22 +76,12 @@ static NSString *bundleName = @"GSTextField";
 
 - (UILabel *)errorLabel {
     if (!_errorLabel) {
-        _errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 47, self.bounds.size.width-85, 13)];
+        _errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 47, self.bounds.size.width-10, 13)];
         _errorLabel.font = [UIFont systemFontOfSize:12];
         _errorLabel.textColor = self.errorColor;
         _errorLabel.numberOfLines = 2;
     }
     return _errorLabel;
-}
-
-- (UILabel *)countLabel {
-    if (!_countLabel) {
-        _countLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.bounds.size.width-75, 47, 70, 13)];
-        _countLabel.font = [UIFont systemFontOfSize:12];
-        _countLabel.textColor = self.normalColor;
-        _countLabel.textAlignment = NSTextAlignmentRight;
-    }
-    return _countLabel;
 }
 
 - (UIView *)shakeView {
@@ -107,26 +97,13 @@ static NSString *bundleName = @"GSTextField";
         [self addSubview:self.textField];
         [self addSubview:self.seperatorView];
         [self addSubview:self.errorLabel];
-        [self addSubview:self.countLabel];
 
-        _maxCount = -1;
-        _minCount = -1;
         isSelected = false;
     }
     return self;
 }
 
 #pragma mark - Set Methods
-
-- (void)setMaxCount:(int)maxCount {
-    _maxCount = maxCount;
-    [self checkCount];
-}
-
-- (void)setMinCount:(int)minCount {
-    _minCount = minCount;
-    [self checkCount];
-}
 
 #pragma mark - Editing Events
 
@@ -160,55 +137,9 @@ static NSString *bundleName = @"GSTextField";
 
 - (void) textDidChange :(UITextField *)textField {
     [self isValid];
-    [self checkCount];
 }
 
 #pragma mark - View Change
-
-- (void) checkCount {
-    NSString *countChecker = @"";
-    BOOL isValid = true;
-    if (self.minCount >= 0) {
-        if (self.maxCount >= 0) {
-            countChecker = [NSString stringWithFormat:@"(%d - %d)",self.minCount, self.maxCount];
-            if ([self.textField.text length] >= self.minCount && [self.textField.text length] <= self.maxCount) {
-                isValid = true;
-            }
-            else{
-                isValid = false;
-            }
-        }
-        else {
-            countChecker = [NSString stringWithFormat:@"%d+",self.minCount];
-            if ([self.textField.text length] >= self.minCount) {
-                isValid = true;
-            }
-            else{
-                isValid = false;
-            }
-        }
-    }
-    else {
-        if (self.maxCount >= 0) {
-            countChecker = [NSString stringWithFormat:@"%d", self.maxCount];
-            if ([self.textField.text length] <= self.maxCount) {
-                isValid = true;
-            }
-            else{
-                isValid = false;
-            }
-        }
-    }
-    if (countChecker.length > 0) {
-        self.countLabel.text = [NSString stringWithFormat:@"%lu/%@",(unsigned long)[self.textField.text length],countChecker];
-    }
-    if (isValid) {
-        self.countLabel.textColor = self.normalColor;
-    }
-    else {
-        self.countLabel.textColor = self.errorColor;
-    }
-}
 
 -(BOOL) isValid  {
     BOOL isValid = YES;
@@ -255,7 +186,19 @@ static NSString *bundleName = @"GSTextField";
             else if ([validator isKindOfClass:[GSLengthValidator class]]) {
                 if (self.textField.text.length > 0) {
                     isValid = NO;
-                    self.errorLabel.text = GSMaterialLocalizedString(@"error.length.error");
+                    GSLengthValidator *lenghtValidator = (GSLengthValidator *)validator;
+                    if (lenghtValidator.validatorType == GSLengthValidatorTypeMoreThan) {
+                        self.errorLabel.text = [NSString stringWithFormat:GSMaterialLocalizedString(@"error.length.morethan"),lenghtValidator.length];
+                    }
+                    else if (lenghtValidator.validatorType == GSLengthValidatorTypeLessThan) {
+                        self.errorLabel.text = [NSString stringWithFormat:GSMaterialLocalizedString(@"error.length.lessthan"),lenghtValidator.length];
+                    }
+                    else if (lenghtValidator.validatorType == GSLengthValidatorTypeEqual) {
+                        self.errorLabel.text = [NSString stringWithFormat:GSMaterialLocalizedString(@"error.length.equal"),lenghtValidator.length];
+                    }
+                    else if (lenghtValidator.validatorType == GSLengthValidatorTypeRange) {
+                        self.errorLabel.text = [NSString stringWithFormat:GSMaterialLocalizedString(@"error.length.range"),lenghtValidator.length,lenghtValidator.maxLength];
+                    }
                 }
             }
             else {
