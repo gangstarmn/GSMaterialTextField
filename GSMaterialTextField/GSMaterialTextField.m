@@ -79,8 +79,9 @@ static NSString *bundleName = @"GSTextField";
 
 - (UILabel *)errorLabel {
     if (!_errorLabel) {
-        _errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 47, self.bounds.size.width-10, 13)];
+        _errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, self.bounds.size.height-9, self.bounds.size.width-10, 13)];
         _errorLabel.font = [UIFont systemFontOfSize:12];
+        _errorLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
         _errorLabel.textColor = self.errorColor;
         _errorLabel.numberOfLines = 2;
     }
