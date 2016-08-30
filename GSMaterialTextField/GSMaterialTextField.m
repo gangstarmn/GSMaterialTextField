@@ -248,4 +248,7 @@ static NSString *bundleName = @"GSTextField";
     [self textDidChange:self.textField];
 }
 
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.textField becomeFirstResponder];
+}
 @end
