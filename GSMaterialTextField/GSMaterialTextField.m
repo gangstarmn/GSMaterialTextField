@@ -36,7 +36,7 @@ static NSString *bundleName = @"GSTextField";
 
 -(UIView *)seperatorView {
     if (!_seperatorView) {
-        _seperatorView = [[UIView alloc] initWithFrame:CGRectMake(5, self.bounds.size.height-11, self.bounds.size.width-10, 2)];
+        _seperatorView = [[UIView alloc] initWithFrame:CGRectMake(5, self.bounds.size.height-14, self.bounds.size.width-10, 1)];
         _seperatorView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
         _seperatorView.backgroundColor = self.normalColor;
     }
@@ -79,7 +79,7 @@ static NSString *bundleName = @"GSTextField";
 
 - (UILabel *)errorLabel {
     if (!_errorLabel) {
-        _errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, self.bounds.size.height-9, self.bounds.size.width-10, 13)];
+        _errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, self.bounds.size.height-13, self.bounds.size.width-10, 13)];
         _errorLabel.font = [UIFont systemFontOfSize:12];
         _errorLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
         _errorLabel.textColor = self.errorColor;
