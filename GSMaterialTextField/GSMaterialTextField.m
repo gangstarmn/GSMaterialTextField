@@ -206,6 +206,7 @@ static NSString *bundleName = @"GSTextField";
                 }
             }
             else {
+                isValid = NO;
                 self.errorLabel.text = GSMaterialLocalizedString(@"error.error");
             }
             if (!isValid) {
