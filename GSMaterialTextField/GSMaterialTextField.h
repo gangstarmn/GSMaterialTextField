@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) NSArray<LKValidator *> *validators;
 @property (nonatomic, strong) UIView *shakeView;
+@property (nonatomic, assign) BOOL isErrorCustomizableText;
 
 - (void) startEditing;
 - (void) endEditing;

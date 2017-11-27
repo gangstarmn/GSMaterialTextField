@@ -238,7 +238,7 @@ static NSString *bundleName = @"GSTextField";
 }
 
 - (void)reloadViews {
-    if ([self.textField.text length] > 0) {
+    if ([self.textField.text length] > 0 || [self.textField isEditing]) {
         self.hintLabel.frame = CGRectMake(5, 0, self.bounds.size.width-10, 15);
         self.hintLabel.font = [UIFont systemFontOfSize:12];
     }

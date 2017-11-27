@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		6D5704241CD1F19F00BAA506 /* GSMaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D5704221CD1F19F00BAA506 /* GSMaterialTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D5704251CD1F19F00BAA506 /* GSMaterialTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5704231CD1F19F00BAA506 /* GSMaterialTextField.m */; };
-		72D79EFAE009C3CE922CBE3F /* libPods-GSMaterialTextField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E23954843C0DE47197578812 /* libPods-GSMaterialTextField.a */; };
+		BBCA62EA9F260A5A5EE8653A /* libPods-GSMaterialTextField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 920F2FD271633B46DA0E01F6 /* libPods-GSMaterialTextField.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3EBF7A34EEB8D8EA66F41A6D /* Pods-GSMaterialTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSMaterialTextField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GSMaterialTextField/Pods-GSMaterialTextField.debug.xcconfig"; sourceTree = "<group>"; };
-		40C575B4F8CF6CDD48C5487F /* Pods-GSMaterialTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSMaterialTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-GSMaterialTextField/Pods-GSMaterialTextField.release.xcconfig"; sourceTree = "<group>"; };
+		51D6D4DF66E2B062087A1C34 /* Pods-GSMaterialTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSMaterialTextField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GSMaterialTextField/Pods-GSMaterialTextField.debug.xcconfig"; sourceTree = "<group>"; };
 		6D5704131CD1E4B600BAA506 /* GSMaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GSMaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5704181CD1E4B600BAA506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D5704221CD1F19F00BAA506 /* GSMaterialTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMaterialTextField.h; sourceTree = "<group>"; };
 		6D5704231CD1F19F00BAA506 /* GSMaterialTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMaterialTextField.m; sourceTree = "<group>"; };
-		E23954843C0DE47197578812 /* libPods-GSMaterialTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GSMaterialTextField.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		920F2FD271633B46DA0E01F6 /* libPods-GSMaterialTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GSMaterialTextField.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEAC8824D8F37BC24CB4A399 /* Pods-GSMaterialTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSMaterialTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-GSMaterialTextField/Pods-GSMaterialTextField.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +27,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72D79EFAE009C3CE922CBE3F /* libPods-GSMaterialTextField.a in Frameworks */,
+				BBCA62EA9F260A5A5EE8653A /* libPods-GSMaterialTextField.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5BC621748B5A8225E844271A /* Frameworks */ = {
+		1622A62E067AF35B2F127591 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E23954843C0DE47197578812 /* libPods-GSMaterialTextField.a */,
+				51D6D4DF66E2B062087A1C34 /* Pods-GSMaterialTextField.debug.xcconfig */,
+				BEAC8824D8F37BC24CB4A399 /* Pods-GSMaterialTextField.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B75C751E7C387C4C62F74D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				920F2FD271633B46DA0E01F6 /* libPods-GSMaterialTextField.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -47,8 +56,8 @@
 			children = (
 				6D5704151CD1E4B600BAA506 /* GSMaterialTextField */,
 				6D5704141CD1E4B600BAA506 /* Products */,
-				CEBDB44FB64137DE27C0C346 /* Pods */,
-				5BC621748B5A8225E844271A /* Frameworks */,
+				1622A62E067AF35B2F127591 /* Pods */,
+				5B75C751E7C387C4C62F74D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,15 +79,6 @@
 			path = GSMaterialTextField;
 			sourceTree = "<group>";
 		};
-		CEBDB44FB64137DE27C0C346 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3EBF7A34EEB8D8EA66F41A6D /* Pods-GSMaterialTextField.debug.xcconfig */,
-				40C575B4F8CF6CDD48C5487F /* Pods-GSMaterialTextField.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -97,12 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D57041B1CD1E4B600BAA506 /* Build configuration list for PBXNativeTarget "GSMaterialTextField" */;
 			buildPhases = (
-				03F17AA9B16CAADA2ECE7A63 /* Check Pods Manifest.lock */,
+				0423072DE689F7256C243156 /* [CP] Check Pods Manifest.lock */,
 				6D57040E1CD1E4B600BAA506 /* Sources */,
 				6D57040F1CD1E4B600BAA506 /* Frameworks */,
 				6D5704101CD1E4B600BAA506 /* Headers */,
 				6D5704111CD1E4B600BAA506 /* Resources */,
-				73A96BB31CEAFFBE911974D7 /* Copy Pods Resources */,
+				E93BEA5485E54B588802F8D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,30 +155,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03F17AA9B16CAADA2ECE7A63 /* Check Pods Manifest.lock */ = {
+		0423072DE689F7256C243156 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GSMaterialTextField-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		73A96BB31CEAFFBE911974D7 /* Copy Pods Resources */ = {
+		E93BEA5485E54B588802F8D7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GSMaterialTextField/Pods-GSMaterialTextField-resources.sh",
+				"${PODS_ROOT}/GSTextField/GSTextField/GSTextField.bundle",
+				"${PODS_ROOT}/GSTextField/GSTextField/Images.xcassets",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -291,7 +298,7 @@
 		};
 		6D57041C1CD1E4B600BAA506 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EBF7A34EEB8D8EA66F41A6D /* Pods-GSMaterialTextField.debug.xcconfig */;
+			baseConfigurationReference = 51D6D4DF66E2B062087A1C34 /* Pods-GSMaterialTextField.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -308,7 +315,7 @@
 		};
 		6D57041D1CD1E4B600BAA506 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40C575B4F8CF6CDD48C5487F /* Pods-GSMaterialTextField.release.xcconfig */;
+			baseConfigurationReference = BEAC8824D8F37BC24CB4A399 /* Pods-GSMaterialTextField.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

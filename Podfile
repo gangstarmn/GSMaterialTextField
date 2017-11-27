@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'GSMaterialTextField' do
-    pod 'HexColors'
+    pod 'HexColors', '4.0'
     pod 'GSLocalization'
     pod 'GSTextField'
 end
